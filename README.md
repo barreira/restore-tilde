@@ -1,28 +1,17 @@
-# Remap the § key to the ` on macOS
+# Switch \ and \` keys on macOS
 
-If you've bought a Mac in the UK recently you may have noticed a key sitting left of the number 1 key which you have never used in your life before. I'm talking of course about the § key. This script will remap this key to a more useful one - `. If you prefer to remap it to some other key, be sure to [read my article on the subject](https://dchakarov.com/blog/macbook-remap-keys/).
+This is a fork of https://github.com/dchakarov/restore-tilde (more info in there) that remaps the key to right of the left shift (ISO UK keyboard) to the key to the left of 1 (and vice-versa), effectively switching the keys. 
 
-## Usage
+This is due to the fact that the 2020 Macbook Pro with touchbar that I'm using has these keys switched on my external keyboard for some reason. (Original macbook layout: ISO PT-PT; external keyboard layout: ISO UK)
 
-### Execute at login
+Note: This also switches these keys when using the actual keyboard on the machine on the original ISO PT-PT layout (and they were working correctly). I don't really mind, so I haven't yet searched for a better solution.
 
-The most convenient way to use the script is to add the `RestoreTildeKey.app` to Login Items so it executes at login.
+# How to run
 
-### Manual
+## Run once (restart undoes this)
 
-Another way would be to execute the `restoreTildeKey.sh` script in Terminal
+Run `switchBackslashAndGraveAccent.sh` script
 
-``` bash
-$ chmod +x restoreTildeKey.sh
-$ ./restoreTildeKey.sh
-```
+## Automatically on every startup
 
-
-## Author
-
-Dimitar Chakarov, dimitar@dchakarov.com
-
-
-## License
-
-This is free and unencumbered software released into the public domain. See the LICENSE file for more info.
+Add `SwitchBackslashAndGraveAccent.app` to `System Preferences - Users & Group - Login Items`
